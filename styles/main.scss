@@ -1,0 +1,102 @@
+@import "./global";
+
+header {
+  .wrapper {
+    max-width: 918px;
+    margin: 0 auto;
+    padding: 3.125rem 0 2.5rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    nav {
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        li {
+          a {
+            position: relative;
+
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: $text-color;
+            transition: color 0.2s;
+
+            &::after {
+              content: "";
+              position: absolute;
+              height: 2px;
+              width: 0;
+              left: 0;
+              bottom: -5px;
+
+              background: $button;
+              transition: width 0.2s;
+            }
+
+            &:hover {
+              font-weight: 600;
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    a.button {
+      padding: 0.687rem 2.375rem;
+      height: 2.375rem;
+      text-transform: uppercase;
+      color: $text-color;
+
+      font-size: 0.687rem;
+      font-weight: bold;
+      border: 1px solid $button;
+      border-radius: 6px;
+      transition: 200ms ease-in-out;
+
+      &:hover {
+        background: $button;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+    h1,
+    p {
+      font-size: 5rem;
+      font-weight: 700;
+      color: $text-color;
+    }
+  }
+
+  .background-coffee {
+    width: 798px;
+  }
+}
+
+.ball-right {
+  position: absolute;
+  width: 321px;
+  height: 321px;
+  // left: 1127px;
+  top: -63px;
+
+  background: url("../assets/blur-1.png");
+  filter: blur(400px);
+}

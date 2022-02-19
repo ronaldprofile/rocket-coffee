@@ -1,0 +1,33 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+*,
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: $background;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

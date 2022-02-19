@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+*,
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header .wrapper {
+  max-width: 918px;
+  margin: 0 auto;
+  padding: 3.125rem 0 2.5rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .wrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+header .wrapper nav ul li a {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+header .wrapper nav ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  background: #8257e5;
+  -webkit-transition: width 0.2s;
+  transition: width 0.2s;
+}
+
+header .wrapper nav ul li a:hover {
+  font-weight: 600;
+}
+
+header .wrapper nav ul li a:hover::after {
+  width: 100%;
+}
+
+header .wrapper a.button {
+  padding: 0.687rem 2.375rem;
+  height: 2.375rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 0.687rem;
+  font-weight: bold;
+  border: 1px solid #8257e5;
+  border-radius: 6px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+header .wrapper a.button:hover {
+  background: #8257e5;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+main .text h1,
+main .text p {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+main .background-coffee {
+  width: 798px;
+}
+
+.ball-right {
+  position: absolute;
+  width: 321px;
+  height: 321px;
+  top: -63px;
+  background: url("../assets/blur-1.png");
+  -webkit-filter: blur(400px);
+          filter: blur(400px);
+}
+/*# sourceMappingURL=main.css.map */
