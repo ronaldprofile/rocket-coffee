@@ -83,6 +83,12 @@ main {
       font-weight: 700;
       color: $text-color;
     }
+
+    p {
+      color: #000;
+      text-shadow: -1px -1px 0 $button, 1px -1px 0 $button, -1px 1px 0 $button,
+        1px 1px 0 $button;
+    }
   }
 
   .background-coffee {

@@ -133,6 +133,11 @@ main .text p {
   color: #fff;
 }
 
+main .text p {
+  color: #000;
+  text-shadow: -1px -1px 0 #8257e5, 1px -1px 0 #8257e5, -1px 1px 0 #8257e5, 1px 1px 0 #8257e5;
+}
+
 main .background-coffee {
   width: 798px;
 }
