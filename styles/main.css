@@ -31,7 +31,11 @@ a {
   text-decoration: none;
 }
 
-header .wrapper {
+.container {
+  position: relative;
+}
+
+.container header .wrapper {
   max-width: 918px;
   margin: 0 auto;
   padding: 3.125rem 0 2.5rem 0;
@@ -46,7 +50,7 @@ header .wrapper {
           justify-content: space-between;
 }
 
-header .wrapper nav ul {
+.container header .wrapper nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +60,7 @@ header .wrapper nav ul {
   gap: 2rem;
 }
 
-header .wrapper nav ul li a {
+.container header .wrapper nav ul li a {
   position: relative;
   font-size: 0.875rem;
   font-weight: 500;
@@ -65,7 +69,7 @@ header .wrapper nav ul li a {
   transition: color 0.2s;
 }
 
-header .wrapper nav ul li a::after {
+.container header .wrapper nav ul li a::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -77,15 +81,15 @@ header .wrapper nav ul li a::after {
   transition: width 0.2s;
 }
 
-header .wrapper nav ul li a:hover {
+.container header .wrapper nav ul li a:hover {
   font-weight: 600;
 }
 
-header .wrapper nav ul li a:hover::after {
+.container header .wrapper nav ul li a:hover::after {
   width: 100%;
 }
 
-header .wrapper a.button {
+.container header .wrapper a.button {
   padding: 0.687rem 2.375rem;
   height: 2.375rem;
   text-transform: uppercase;
@@ -98,11 +102,11 @@ header .wrapper a.button {
   transition: 200ms ease-in-out;
 }
 
-header .wrapper a.button:hover {
+.container header .wrapper a.button:hover {
   background: #8257e5;
 }
 
-main {
+.container main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +119,7 @@ main {
           align-items: center;
 }
 
-main .text {
+.container main .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,29 +130,49 @@ main .text {
   text-align: center;
 }
 
-main .text h1,
-main .text p {
+.container main .text h1,
+.container main .text p {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
 }
 
-main .text p {
+.container main .text p {
   color: #000;
   text-shadow: -1px -1px 0 #8257e5, 1px -1px 0 #8257e5, -1px 1px 0 #8257e5, 1px 1px 0 #8257e5;
 }
 
-main .background-coffee {
+.container main .background-coffee {
   width: 798px;
 }
 
-.ball-right {
-  position: absolute;
-  width: 321px;
+.container main .background-coffee img {
+  height: auto;
+}
+
+.container .blur-top {
   height: 321px;
-  top: -63px;
-  background: url("../assets/blur-1.png");
+  width: 321px;
+  position: absolute;
+  top: -60px;
+  right: -0px;
+  z-index: -2;
+  border-radius: 9999px;
   -webkit-filter: blur(400px);
           filter: blur(400px);
+  background: #996dff;
+}
+
+.container .blur-bottom {
+  height: 321px;
+  width: 321px;
+  position: absolute;
+  top: 495px;
+  left: 0px;
+  z-index: -2;
+  border-radius: 9999px;
+  -webkit-filter: blur(400px);
+          filter: blur(400px);
+  background: #996dff;
 }
 /*# sourceMappingURL=main.css.map */

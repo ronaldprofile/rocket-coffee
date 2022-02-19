@@ -1,108 +1,129 @@
 @import "./global";
 
-header {
-  .wrapper {
-    max-width: 918px;
-    margin: 0 auto;
-    padding: 3.125rem 0 2.5rem 0;
+.container {
+  position: relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  header {
+    .wrapper {
+      max-width: 918px;
+      margin: 0 auto;
+      padding: 3.125rem 0 2.5rem 0;
 
-    nav {
-      ul {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
 
-        li {
-          a {
-            position: relative;
+      nav {
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
 
-            font-size: 0.875rem;
-            font-weight: 500;
-            color: $text-color;
-            transition: color 0.2s;
+          li {
+            a {
+              position: relative;
 
-            &::after {
-              content: "";
-              position: absolute;
-              height: 2px;
-              width: 0;
-              left: 0;
-              bottom: -5px;
+              font-size: 0.875rem;
+              font-weight: 500;
+              color: $text-color;
+              transition: color 0.2s;
 
-              background: $button;
-              transition: width 0.2s;
-            }
-
-            &:hover {
-              font-weight: 600;
               &::after {
-                width: 100%;
+                content: "";
+                position: absolute;
+                height: 2px;
+                width: 0;
+                left: 0;
+                bottom: -5px;
+
+                background: $button;
+                transition: width 0.2s;
+              }
+
+              &:hover {
+                font-weight: 600;
+                &::after {
+                  width: 100%;
+                }
               }
             }
           }
         }
       }
-    }
 
-    a.button {
-      padding: 0.687rem 2.375rem;
-      height: 2.375rem;
-      text-transform: uppercase;
-      color: $text-color;
+      a.button {
+        padding: 0.687rem 2.375rem;
+        height: 2.375rem;
+        text-transform: uppercase;
+        color: $text-color;
 
-      font-size: 0.687rem;
-      font-weight: bold;
-      border: 1px solid $button;
-      border-radius: 6px;
-      transition: 200ms ease-in-out;
+        font-size: 0.687rem;
+        font-weight: bold;
+        border: 1px solid $button;
+        border-radius: 6px;
+        transition: 200ms ease-in-out;
 
-      &:hover {
-        background: $button;
+        &:hover {
+          background: $button;
+        }
       }
     }
   }
-}
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .text {
+  main {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    text-align: center;
-    h1,
-    p {
-      font-size: 5rem;
-      font-weight: 700;
-      color: $text-color;
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      text-align: center;
+      h1,
+      p {
+        font-size: 5rem;
+        font-weight: 700;
+        color: $text-color;
+      }
+
+      p {
+        color: #000;
+        text-shadow: -1px -1px 0 $button, 1px -1px 0 $button, -1px 1px 0 $button,
+          1px 1px 0 $button;
+      }
     }
 
-    p {
-      color: #000;
-      text-shadow: -1px -1px 0 $button, 1px -1px 0 $button, -1px 1px 0 $button,
-        1px 1px 0 $button;
+    .background-coffee {
+      width: 798px;
+
+      img {
+        height: auto;
+      }
     }
   }
 
-  .background-coffee {
-    width: 798px;
+  .blur-top {
+    height: 321px;
+    width: 321px;
+    position: absolute;
+    top: -60px;
+    right: -0px;
+    z-index: -2;
+    border-radius: 9999px;
+    filter: blur(400px);
+    background: #996dff;
   }
-}
 
-.ball-right {
-  position: absolute;
-  width: 321px;
-  height: 321px;
-  // left: 1127px;
-  top: -63px;
-
-  background: url("../assets/blur-1.png");
-  filter: blur(400px);
+  .blur-bottom {
+    height: 321px;
+    width: 321px;
+    position: absolute;
+    top: 495px;
+    left: 0px;
+    z-index: -2;
+    border-radius: 9999px;
+    filter: blur(400px);
+    background: #996dff;
+  }
 }
