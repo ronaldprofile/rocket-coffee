@@ -30,6 +30,6 @@ Neste desafio você vai construir uma homepage para uma marca de café*.* Caso v
 **Requisitos para o desafio:**
 
 - Seguir o layout do Figma.
-- Deixar o layout responsivo conforme o Figma (em andamento).
+- Deixar o layout responsivo conforme o Figma ✅.
 - Na versão mobile, ao clicar no menu hamburger deverá exibir um menu responsivo (em andamento).
 - Adicionar `hover` nos botões.
