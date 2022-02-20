@@ -31,6 +31,33 @@ a {
   text-decoration: none;
 }
 
+.button {
+  padding: 0.687rem 2.375rem;
+  height: 2.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.625rem;
+  font-size: 0.687rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid #8257e5;
+  border-radius: 6px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.button:hover {
+  background: #8257e5;
+}
+
 .container {
   position: relative;
 }
@@ -48,6 +75,10 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.container header .wrapper #logo #logo-mobile {
+  display: none;
 }
 
 .container header .wrapper nav ul {
@@ -89,21 +120,8 @@ a {
   width: 100%;
 }
 
-.container header .wrapper a.button {
-  padding: 0.687rem 2.375rem;
-  height: 2.375rem;
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 0.687rem;
-  font-weight: bold;
-  border: 1px solid #8257e5;
-  border-radius: 6px;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-}
-
-.container header .wrapper a.button:hover {
-  background: #8257e5;
+.container header .wrapper #button-menu {
+  display: none;
 }
 
 .container main {
@@ -119,7 +137,11 @@ a {
           align-items: center;
 }
 
-.container main .text {
+.container main #hero {
+  display: none;
+}
+
+.container main #coffee .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,27 +149,26 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 0.5rem;
   text-align: center;
 }
 
-.container main .text h1,
-.container main .text p {
+.container main #coffee .text h1,
+.container main #coffee .text p {
   font-size: 5rem;
   font-weight: 700;
   color: #fff;
 }
 
-.container main .text p {
+.container main #coffee .text p {
   color: #000;
   text-shadow: -1px -1px 0 #8257e5, 1px -1px 0 #8257e5, -1px 1px 0 #8257e5, 1px 1px 0 #8257e5;
 }
 
-.container main .background-coffee {
+.container main #coffee .background-coffee {
   width: 798px;
-}
-
-.container main .background-coffee img {
-  height: auto;
+  height: 500px;
+  background: url("../assets/rocket-coffee.png") no-repeat center;
 }
 
 .container .blur-top {
@@ -174,5 +195,74 @@ a {
   -webkit-filter: blur(400px);
           filter: blur(400px);
   background: #996dff;
+}
+
+@media (max-width: 428px) {
+  .container header {
+    border-bottom: 1px solid #29292e;
+  }
+  .container header .wrapper {
+    padding: 2.312rem 1.625rem 1.625rem;
+  }
+  .container header .wrapper #logo #logo-desktop {
+    display: none;
+  }
+  .container header .wrapper #logo #logo-mobile {
+    display: block;
+  }
+  .container header .wrapper nav #menu {
+    display: none;
+  }
+  .container header .wrapper > a {
+    display: none;
+  }
+  .container header .wrapper #button-menu {
+    display: block;
+    background: none;
+    border: 0;
+  }
+  .container main #hero {
+    display: block;
+    margin: 5.5rem 0;
+  }
+  .container main #hero .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 5.5rem;
+    padding: 0 1.687rem;
+    text-align: center;
+  }
+  .container main #hero .content p {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .container main #coffee {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.562rem;
+  }
+  .container main #coffee .text h1,
+  .container main #coffee .text p {
+    font-size: 2.5rem;
+  }
+  .container main #coffee .background-coffee {
+    width: 428px;
+    height: 333px;
+    background-size: contain;
+  }
+  .container .blur-top {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

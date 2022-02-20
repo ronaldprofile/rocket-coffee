@@ -13,6 +13,12 @@
       align-items: center;
       justify-content: space-between;
 
+      #logo {
+        #logo-mobile {
+          display: none;
+        }
+      }
+
       nav {
         ul {
           display: flex;
@@ -51,21 +57,8 @@
         }
       }
 
-      a.button {
-        padding: 0.687rem 2.375rem;
-        height: 2.375rem;
-        text-transform: uppercase;
-        color: $text-color;
-
-        font-size: 0.687rem;
-        font-weight: bold;
-        border: 1px solid $button;
-        border-radius: 6px;
-        transition: 200ms ease-in-out;
-
-        &:hover {
-          background: $button;
-        }
+      #button-menu {
+        display: none;
       }
     }
   }
@@ -75,30 +68,35 @@
     flex-direction: column;
     align-items: center;
 
-    .text {
-      display: flex;
-      flex-direction: column;
-
-      text-align: center;
-      h1,
-      p {
-        font-size: 5rem;
-        font-weight: 700;
-        color: $text-color;
-      }
-
-      p {
-        color: #000;
-        text-shadow: -1px -1px 0 $button, 1px -1px 0 $button, -1px 1px 0 $button,
-          1px 1px 0 $button;
-      }
+    #hero {
+      display: none;
     }
 
-    .background-coffee {
-      width: 798px;
+    #coffee {
+      .text {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
 
-      img {
-        height: auto;
+        h1,
+        p {
+          font-size: 5rem;
+          font-weight: 700;
+          color: $text-color;
+        }
+
+        p {
+          color: #000;
+          text-shadow: -1px -1px 0 $button, 1px -1px 0 $button,
+            -1px 1px 0 $button, 1px 1px 0 $button;
+        }
+      }
+
+      .background-coffee {
+        width: 798px;
+        height: 500px;
+        background: url("../assets/rocket-coffee.png") no-repeat center;
       }
     }
   }
@@ -125,5 +123,87 @@
     border-radius: 9999px;
     filter: blur(400px);
     background: #996dff;
+  }
+}
+
+@media (max-width: 428px) {
+  .container {
+    header {
+      border-bottom: 1px solid #29292e;
+
+      .wrapper {
+        padding: 2.312rem 1.625rem 1.625rem;
+
+        #logo {
+          #logo-desktop {
+            display: none;
+          }
+
+          #logo-mobile {
+            display: block;
+          }
+        }
+
+        nav {
+          #menu {
+            display: none;
+          }
+        }
+
+        > a {
+          display: none;
+        }
+
+        #button-menu {
+          display: block;
+          background: none;
+          border: 0;
+        }
+      }
+    }
+
+    main {
+      #hero {
+        display: block;
+        margin: 5.5rem 0;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 5.5rem;
+          padding: 0 1.687rem;
+
+          text-align: center;
+          p {
+            font-size: 1.875rem;
+            font-weight: 600;
+            color: $text-color;
+          }
+        }
+      }
+
+      #coffee {
+        display: flex;
+        flex-direction: column;
+        gap: 1.562rem;
+
+        .text {
+          h1,
+          p {
+            font-size: 2.5rem;
+          }
+        }
+
+        .background-coffee {
+          width: 428px;
+          height: 333px;
+          background-size: contain;
+        }
+      }
+    }
+
+    .blur-top {
+      display: none;
+    }
   }
 }

@@ -31,3 +31,24 @@ li {
 a {
   text-decoration: none;
 }
+
+.button {
+  padding: 0.687rem 2.375rem;
+  height: 2.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.625rem;
+  font-size: 0.687rem;
+  font-weight: bold;
+  color: $text-color;
+  text-transform: uppercase;
+  border: 1px solid $button;
+  border-radius: 6px;
+  transition: 200ms ease-in-out;
+
+  &:hover {
+    background: $button;
+  }
+}
