@@ -77,7 +77,20 @@ a {
           justify-content: space-between;
 }
 
-.container header .wrapper #logo #logo-mobile {
+.container header .wrapper nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container header .wrapper nav #logo #logo-mobile {
   display: none;
 }
 
@@ -120,7 +133,8 @@ a {
   width: 100%;
 }
 
-.container header .wrapper #button-menu {
+.container header .wrapper nav #button-menu,
+.container header .wrapper nav #button-close {
   display: none;
 }
 
@@ -197,29 +211,63 @@ a {
   background: #996dff;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 600px) {
   .container header {
     border-bottom: 1px solid #29292e;
   }
   .container header .wrapper {
     padding: 2.312rem 1.625rem 1.625rem;
   }
-  .container header .wrapper #logo #logo-desktop {
+  .container header .wrapper nav {
+    /* open menu */
+  }
+  .container header .wrapper nav #logo #logo-desktop {
     display: none;
   }
-  .container header .wrapper #logo #logo-mobile {
+  .container header .wrapper nav #logo #logo-mobile {
     display: block;
   }
   .container header .wrapper nav #menu {
-    display: none;
-  }
-  .container header .wrapper > a {
-    display: none;
-  }
-  .container header .wrapper #button-menu {
     display: block;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    right: 0px;
+    background: #000;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    z-index: 1000;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  .container header .wrapper nav #menu li {
+    padding: 1rem 0 0.875rem 1.562rem;
+    border-bottom: 1px solid #29292e;
+  }
+  .container header .wrapper nav > a.button {
+    display: none;
+  }
+  .container header .wrapper nav button {
     background: none;
     border: 0;
+  }
+  .container header .wrapper nav #button-menu {
+    display: block;
+  }
+  .container header .wrapper nav #button-close {
+    display: none;
+  }
+  .container header .wrapper nav.active #menu {
+    height: calc(100vh - 100px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  .container header .wrapper nav.active #button-menu {
+    display: none;
+  }
+  .container header .wrapper nav.active #button-close {
+    display: block;
   }
   .container main #hero {
     display: block;

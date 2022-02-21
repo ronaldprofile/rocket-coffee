@@ -13,13 +13,18 @@
       align-items: center;
       justify-content: space-between;
 
-      #logo {
-        #logo-mobile {
-          display: none;
-        }
-      }
-
       nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #logo {
+          #logo-mobile {
+            display: none;
+          }
+        }
+
         ul {
           display: flex;
           align-items: center;
@@ -55,10 +60,11 @@
             }
           }
         }
-      }
 
-      #button-menu {
-        display: none;
+        #button-menu,
+        #button-close {
+          display: none;
+        }
       }
     }
   }
@@ -126,7 +132,7 @@
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 600px) {
   .container {
     header {
       border-bottom: 1px solid #29292e;
@@ -134,30 +140,69 @@
       .wrapper {
         padding: 2.312rem 1.625rem 1.625rem;
 
-        #logo {
-          #logo-desktop {
+        nav {
+          #logo {
+            #logo-desktop {
+              display: none;
+            }
+
+            #logo-mobile {
+              display: block;
+            }
+          }
+
+          #menu {
+            display: block;
+            position: absolute;
+            width: 100%;
+            top: 100px;
+            right: 0px;
+            background: $background;
+            transition: 0.6s;
+            z-index: 1000;
+            height: 0;
+            visibility: hidden;
+            overflow-y: hidden;
+
+            li {
+              padding: 1rem 0 0.875rem 1.562rem;
+              border-bottom: 1px solid #29292e;
+            }
+          }
+
+          > a.button {
             display: none;
           }
 
-          #logo-mobile {
+          button {
+            background: none;
+            border: 0;
+          }
+
+          #button-menu {
             display: block;
           }
-        }
 
-        nav {
-          #menu {
+          #button-close {
             display: none;
           }
-        }
 
-        > a {
-          display: none;
-        }
+          /* open menu */
+          &.active {
+            #menu {
+              height: calc(100vh - 100px);
+              visibility: visible;
+              overflow-y: auto;
+            }
 
-        #button-menu {
-          display: block;
-          background: none;
-          border: 0;
+            #button-menu {
+              display: none;
+            }
+
+            #button-close {
+              display: block;
+            }
+          }
         }
       }
     }

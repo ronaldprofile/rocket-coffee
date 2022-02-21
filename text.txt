@@ -1,4 +1,0 @@
-temos duas branch
-
-- main (master)
-- mobile (layout responsivo aqui)

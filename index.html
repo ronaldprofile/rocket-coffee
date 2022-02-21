@@ -18,17 +18,17 @@
     <div class="container">
       <header>
         <div class="wrapper">
-          <div id="logo">
-            <a href="#" id="logo-desktop">
-              <img src="./assets/logo-desktop.svg" alt="Logo Rocketseat" />
-            </a>
-
-            <a href="#" id="logo-mobile">
-              <img src="./assets/logo-mobile.svg" alt="Logo Rocketseat" />
-            </a>
-          </div>
-
           <nav>
+            <div id="logo">
+              <a href="#" id="logo-desktop">
+                <img src="./assets/logo-desktop.svg" alt="Logo Rocketseat" />
+              </a>
+
+              <a href="#" id="logo-mobile">
+                <img src="./assets/logo-mobile.svg" alt="Logo Rocketseat" />
+              </a>
+            </div>
+
             <ul id="menu">
               <li><a href="#">Home</a></li>
               <li><a href="#">Menu</a></li>
@@ -36,13 +36,22 @@
               <li><a href="#">Gift Cards</a></li>
               <li><a href="#">Lojas</a></li>
             </ul>
+
+            <a href="#" class="button">pegar meu café</a>
+
+            <div class="buttons">
+              <button id="button-menu">
+                <img src="./assets/menu-buguer-open.svg" alt="menu icon" />
+              </button>
+
+              <button id="button-close">
+                <img
+                  src="./assets/menu-buguer-close.svg"
+                  alt="icon close menu"
+                />
+              </button>
+            </div>
           </nav>
-
-          <a href="#" class="button">pegar meu café</a>
-
-          <button id="button-menu">
-            <img src="./assets/menu-buguer-open.svg" alt="menu icon" />
-          </button>
         </div>
       </header>
 
@@ -72,5 +81,7 @@
       <div class="blur-top"></div>
       <div class="blur-bottom"></div>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>
